@@ -89,8 +89,9 @@ public class VersionUpdateUtils {
                 versionEntity.description = jsonObject.getString("des");
                 versionEntity.apkurl = jsonObject.getString("apkurl");
                   //版本升级
-                  if (!mVersion.equals(versionEntity.versioncode))
+                  if (!mVersion.equals(versionEntity.versioncode)) {
                       handler.sendEmptyMessage(MESSAGE_SHOW_DIALOG);
+                  }
             }
         } catch (IOException e) {
             handler.sendEmptyMessage(MESSAGE_IO_ERROR);
@@ -122,6 +123,7 @@ public class VersionUpdateUtils {
         builder.show();
     }
     private void enterHome(){
+
         handler.sendEmptyMessage(MESSAGE_ENTERHOME);
     }
     private void downloadNewApk(String apkurl){
