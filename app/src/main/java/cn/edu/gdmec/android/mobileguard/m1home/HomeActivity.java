@@ -1,6 +1,6 @@
 package cn.edu.gdmec.android.mobileguard.m1home;
 
-import android.provider.Settings;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
