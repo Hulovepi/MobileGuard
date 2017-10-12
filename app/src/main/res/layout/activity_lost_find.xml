@@ -187,7 +187,7 @@
                 android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/delete_data_small"
                 android:drawablePadding="5dp"
-                android:text="远程删除数据"
+                android:text="远程删除数据!"
                 android:textColor="@color/purple"/>
         </RelativeLayout>
 
