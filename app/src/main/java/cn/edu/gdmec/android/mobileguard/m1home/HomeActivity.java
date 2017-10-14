@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity {
                         if(isSetUpPassword()){
                             showInterPswdDialog();
                         }else {
-                            showInterPswdDialog();
+                            showSetUpPswdDialog();
                         }
                         break;
                 }

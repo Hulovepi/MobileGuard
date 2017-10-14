@@ -28,9 +28,9 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener 
         this.context = context;
     }
     @Override
-    protected void onCreate(Bundle saveInstanceState){
+    protected void onCreate(Bundle savedInstanceState){
         setContentView(R.layout.inter_password_dialog);
-        super.onCreate(saveInstanceState);
+        super.onCreate(savedInstanceState);
         initView();
     }
     private void initView(){

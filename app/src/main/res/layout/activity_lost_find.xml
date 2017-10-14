@@ -42,7 +42,7 @@
             style="@style/textview16sp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:text="防盗保护是否开启"
             android:textColor="@color/purple"/>
 
@@ -110,7 +110,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp">
-
+<TextView
+    style="@style/textview16sp"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    android:text="#*alarm*#"
+    android:textColor="@color/purple"/>
             <TextView
                 style="@style/textview16sp"
                 android:layout_alignParentLeft="true"
@@ -187,7 +192,7 @@
                 android:layout_marginLeft="10dp"
                 android:drawableLeft="@drawable/delete_data_small"
                 android:drawablePadding="5dp"
-                android:text="远程删除数据!"
+                android:text="远程删除数据"
                 android:textColor="@color/purple"/>
         </RelativeLayout>
 
