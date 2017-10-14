@@ -16,7 +16,7 @@ import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m1home.adapter.HomeAdapter;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.LostFindActivity;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.InterPasswordDialog;
-import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.SetupPasswordDialog;
+import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.SetUpPasswordDialog;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.utils.MD5Utils;
 
 public class HomeActivity extends AppCompatActivity {
@@ -66,8 +66,8 @@ public  void startActivity(Class<?> cls){
         return super.onKeyDown(keyCode, event);
     }
     private void showSetUpPswdDialog(){
-        final SetupPasswordDialog setUpPasswordDialog = new SetupPasswordDialog(HomeActivity.this);
-        setUpPasswordDialog.setCallBack(new SetupPasswordDialog.MyCallBack(){
+        final SetUpPasswordDialog setUpPasswordDialog = new SetUpPasswordDialog(HomeActivity.this);
+        setUpPasswordDialog.setCallBack(new SetUpPasswordDialog.MyCallBack(){
             @Override
             public void ok(){
                 String firstPwsd = setUpPasswordDialog.mFirstPWDET.getText().toString().trim();

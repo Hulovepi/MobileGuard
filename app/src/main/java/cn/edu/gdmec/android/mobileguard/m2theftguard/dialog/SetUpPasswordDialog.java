@@ -11,11 +11,8 @@ import android.widget.TextView;
 
 import cn.edu.gdmec.android.mobileguard.R;
 
-/**
- * Created by Administrator on 2017/9/28 0028.
- */
 
-public class SetupPasswordDialog extends Dialog implements View.OnClickListener {
+public class SetUpPasswordDialog extends Dialog implements View.OnClickListener {
     private TextView mTitleTV;/**标题栏*/
     public EditText mFirstPWDET;/**首次输入密码文本框*/
     public EditText mAffirmET;/**确认密码文本框*/
@@ -27,9 +24,10 @@ public class SetupPasswordDialog extends Dialog implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         initView();
     }
-    public SetupPasswordDialog(@NonNull Context context) {
+    public SetUpPasswordDialog(@NonNull Context context) {
         super(context,R.style.dialog_custom);
     }
+    //    初始化控件
     private void initView(){
         mTitleTV = (TextView)findViewById(R.id.tv_setuppwd_title);
         mFirstPWDET = (EditText)findViewById(R.id.et_firstpwd);
@@ -38,6 +36,9 @@ public class SetupPasswordDialog extends Dialog implements View.OnClickListener 
         findViewById(R.id.btn_cancel).setOnClickListener(this);
 
     }
+//    设置对话框标题栏
+//    @param title
+
     public void setTitle(String title){
         if(!TextUtils.isEmpty(title)){
             mTitleTV.setText(title);

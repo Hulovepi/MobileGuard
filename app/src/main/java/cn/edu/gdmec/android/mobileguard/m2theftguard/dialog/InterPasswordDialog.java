@@ -28,9 +28,9 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener 
         this.context = context;
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle saveInstanceState){
         setContentView(R.layout.inter_password_dialog);
-        super.onCreate(savedInstanceState);
+        super.onCreate(saveInstanceState);
         initView();
     }
     private void initView(){
@@ -41,6 +41,11 @@ public class InterPasswordDialog extends Dialog implements View.OnClickListener 
         mOKBtn.setOnClickListener(this);
         mCancleBtn.setOnClickListener(this);
     }
+
+    /**
+     * 设置对话框标题
+     * @param title
+     */
     public  void setTitle(String title){
         if(!TextUtils.isEmpty(title)){
             mTitleTV.setText(title);
