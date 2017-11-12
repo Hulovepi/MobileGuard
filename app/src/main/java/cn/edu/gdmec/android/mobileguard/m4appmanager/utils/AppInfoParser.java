@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class AppInfoParser {
             appinfo.icon = icon;
             String appname = packInfo.applicationInfo.loadLabel(pm).toString();
             appinfo.appName = appname;
+
             //应用程序apk包的路径
             String apkpath = packInfo.applicationInfo.sourceDir;
             appinfo.apkPath = apkpath;

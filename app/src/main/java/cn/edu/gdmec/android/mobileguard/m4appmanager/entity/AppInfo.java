@@ -17,12 +17,22 @@ public class AppInfo {
      public String apkPath;
      /**应用程序大小*/
      public long appSize;
-     /**是否是手机存储*/
+    /** app的版本号*/
+    public String appVersion;
+    /**  安装时间*/
+    public String inStallTime;
+    /** apk证书签署者信息*/
+    public String certificateIssuer;
+    /** 权限申请信息*/
+    public String appPermissions;
+
+    /**是否是手机存储*/
      public boolean isInRoom;
      /**是否是用户应用*/
      public boolean isUserApp;
      /**是否选中，默认都为false*/
      public boolean isSelected = false;
+
 
       /**拿到App位置字符串*/
       public String getAppLocation(boolean isInRoom){
