@@ -27,6 +27,16 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/purple"/>
 
+    <TextView
+        android:id="@+id/tv_black_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textview14sp"
+        android:layout_toRightOf="@+id/view_blcak_icon"
+        android:layout_below="@+id/tv_black_mode"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/purple"/>
+
     <View
         android:id="@+id/view_blcak_delete"
         android:layout_width="34dp"
