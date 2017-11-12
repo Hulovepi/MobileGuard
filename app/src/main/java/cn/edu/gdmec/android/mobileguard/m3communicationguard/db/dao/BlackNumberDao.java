@@ -38,7 +38,7 @@ public class BlackNumberDao {
             values.put("number", blackContactInfo.phoneNumber);
             values.put("name", blackContactInfo.contactName);
             values.put("mode", blackContactInfo.mode);
-            values.put("style",blackContactInfo.blackType);
+            values.put("type",blackContactInfo.blackType);
             long rowid = db.insert("blacknumber", null, values);
             if (rowid == -1) {               //  插入数据不成功
                 return false;
