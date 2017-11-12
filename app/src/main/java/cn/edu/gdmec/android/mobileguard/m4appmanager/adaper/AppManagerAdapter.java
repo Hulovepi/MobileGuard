@@ -100,10 +100,12 @@ public class AppManagerAdapter extends BaseAdapter{
                     .findViewById(R.id.imgv_appicon);
             viewHolder.mAppLocationTV = (TextView) view
                     .findViewById(R.id.tv_appisroom);
-            viewHolder.mAppSizeTV = (TextView) view
-                    .findViewById(R.id.tv_appsize);
             viewHolder.mAppNameTV = (TextView) view
                     .findViewById(R.id.tv_appname);
+            viewHolder.mAppOptionLL = (LinearLayout) view
+                    .findViewById(R.id.ll_option_app);
+            viewHolder.mAppSizeTV = (TextView)view
+                    .findViewById(R.id.tv_appsize);
             viewHolder.mLuanchAppTV = (TextView) view
                     .findViewById(R.id.tv_launch_app);
             viewHolder.mSettingAppTV = (TextView) view
@@ -112,8 +114,8 @@ public class AppManagerAdapter extends BaseAdapter{
                     .findViewById(R.id.tv_share_app);
             viewHolder.mUninstallTV = (TextView) view
                     .findViewById(R.id.tv_uninstall_app);
-            viewHolder.mAppOptionLL = (LinearLayout) view
-                    .findViewById(R.id.ll_option_app);
+            viewHolder.mAboutAppTV = (TextView) view
+                    .findViewById(R.id.tv_about_app);
             view.setTag(viewHolder);
         }
         if(appInfo != null){
@@ -134,6 +136,7 @@ public class AppManagerAdapter extends BaseAdapter{
         viewHolder.mSettingAppTV.setOnClickListener(listener);
         viewHolder.mShareAppTV.setOnClickListener(listener);
         viewHolder.mUninstallTV.setOnClickListener(listener);
+        viewHolder.mAboutAppTV.setOnClickListener(listener);
 
         return view;
     }
@@ -161,6 +164,8 @@ public class AppManagerAdapter extends BaseAdapter{
         TextView mShareAppTV;
         /** 设置App */
         TextView mSettingAppTV;
+        /** 关于app */
+        TextView mAboutAppTV;
         /** app 图标 */
         ImageView mAppIconImgv;
         /** app位置 */
@@ -203,6 +208,9 @@ public class AppManagerAdapter extends BaseAdapter{
                         return;
                     }
                     EngineUtils.uninstallApplication(context,appInfo);
+                    break;
+                case R.id.tv_about_app:
+                    EngineUtils.showAboutDialog(context,appInfo);
                     break;
             }
         }

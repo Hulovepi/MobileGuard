@@ -74,6 +74,11 @@
             style="@style/tvyellow14sp"
             android:text="设置"
             android:drawableTop="@drawable/settingicon_yellow_n"/>
+        <TextView
+            android:id="@+id/tv_about_app"
+            style="@style/tvyellow14sp"
+            android:text="关于"
+            android:drawableTop="@drawable/phoneicon_yellow_n"/>
     </LinearLayout>
 
 </LinearLayout>

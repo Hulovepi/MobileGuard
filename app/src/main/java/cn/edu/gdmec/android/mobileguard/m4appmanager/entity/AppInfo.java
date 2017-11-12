@@ -20,7 +20,7 @@ public class AppInfo {
     /** app的版本号*/
     public String appVersion;
     /**  安装时间*/
-    public String inStallTime;
+    public String installTime;
     /** apk证书签署者信息*/
     public String certificateIssuer;
     /** 权限申请信息*/

@@ -1,6 +1,8 @@
 package cn.edu.gdmec.android.mobileguard.m4appmanager.utils;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -63,5 +65,29 @@ public class EngineUtils {
         }else{
             Toast.makeText(context,"系统应用无法卸载",Toast.LENGTH_LONG).show();
         }
+    }
+    /**
+     * 点击『关于』可以弹出一个对话框，显示每一个app的版本号，安装时间，apk证书签署者信息和权限申请信息
+     */
+    public static void showAboutDialog(Context context, AppInfo appInfo){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("MobileGuard");	    //设置对话框标题
+        builder.setMessage("Version："+appInfo.appVersion+"\nInstall time："+appInfo.installTime
+                +"\nCertificate issuer："+appInfo.certificateIssuer
+                +"\nPermissions："+appInfo.appPermissions);
+
+        builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case AlertDialog.BUTTON_POSITIVE:// "确认"按钮退出程序
+                        break;
+                }
+            }
+        });
+        AlertDialog dialog = builder.create();	//创建对话框
+        dialog.show();
+
     }
 }
