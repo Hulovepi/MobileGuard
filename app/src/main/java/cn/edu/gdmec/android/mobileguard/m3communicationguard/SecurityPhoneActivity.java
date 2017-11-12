@@ -29,7 +29,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
     private int pagenumber = 0;
     private int pagesize = 10;
     private int totalNumber;
-    private List<BlackContactInfo>pageBlackNumber = new ArrayList<BlackContactInfo>();
+    private List<BlackContactInfo> pageBlackNumber = new ArrayList<BlackContactInfo>();
     private BlackContactAdapter adapter;
 
     private void fillData(){
@@ -74,6 +74,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
         mHaveBlackNumber = (FrameLayout)findViewById(R.id.fl_haveblacknumber);
         mNoBlackNumber = (FrameLayout)findViewById(R.id.fl_noblacknumber);
         findViewById(R.id.btn_addblacknumber).setOnClickListener(this);
+
         mListView = (ListView)findViewById(R.id.lv_blacknumbers);
         mListView.setOnScrollListener(new AbsListView.OnScrollListener(){
             @Override
@@ -97,6 +98,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
                             }
                         }
                     break;
+
                 }
             }
 
@@ -129,13 +131,14 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
         }
     }
 
+
     @Override
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
-        if (dao.getTotalNumber()>0){
+        if(dao.getTotalNumber() > 0){
             mHaveBlackNumber.setVisibility(View.VISIBLE);
             mNoBlackNumber.setVisibility(View.GONE);
-        }else {
+        }else{
             mHaveBlackNumber.setVisibility(View.GONE);
             mNoBlackNumber.setVisibility(View.VISIBLE);
         }
@@ -143,7 +146,7 @@ public class SecurityPhoneActivity extends AppCompatActivity implements View.OnC
         pageBlackNumber.clear();
         pageBlackNumber
                 .addAll(dao.getPageBlackNumber(pagenumber,pagesize));
-        if (adapter != null){
+        if(adapter != null){
             adapter.notifyDataSetChanged();
         }
     }

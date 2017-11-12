@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
+
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.telephony.TelephonyManager;
@@ -19,11 +20,18 @@ import android.util.Log;
 import com.android.internal.telephony.ITelephony;
 
 import java.lang.reflect.InvocationTargetException;
+
+import android.os.Handler;
+import android.os.IBinder;
+import android.telephony.TelephonyManager;
+import android.util.Log;
+
 import java.lang.reflect.Method;
 
 import cn.edu.gdmec.android.mobileguard.m3communicationguard.db.dao.BlackNumberDao;
 
 /**
+<<<<<<< Updated upstream
  * Created by Administrator on 2017/11/5 0005.
  */
 

@@ -25,13 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".m1home.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <!-- <activity android:name=".m1home.HomeActivity" /> -->
         <activity android:name=".m2theftguard.LostFindActivity" />
         <activity android:name=".m2theftguard.Setup1Activity" />
@@ -80,6 +74,7 @@
         <!-- 通讯卫士部分 -->
         <activity android:name=".m3communicationguard.AddBlackNumberActivity" />
         <activity android:name=".m3communicationguard.SecurityPhoneActivity" />
+<<<<<<< Updated upstream
 
         <receiver
             android:name=".m3communicationguard.receiver.InterceptCallReceiver"
@@ -100,6 +95,9 @@
         </receiver>
 
         <activity android:name=".m4appmanager.AppManagerActivity"></activity>
+=======
+        <activity android:name=".m1home.HomeActivity"></activity>
+>>>>>>> Stashed changes
     </application>
 
 </manifest>

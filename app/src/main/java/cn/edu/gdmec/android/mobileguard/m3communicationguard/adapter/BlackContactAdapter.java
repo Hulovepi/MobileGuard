@@ -17,8 +17,10 @@ import cn.edu.gdmec.android.mobileguard.m3communicationguard.entity.BlackContact
  * Created by Administrator on 2017/11/5 0005.
  */
 
-public class BlackContactAdapter extends BaseAdapter{
-    private List<BlackContactInfo>contactInfos;
+
+
+public class BlackContactAdapter extends BaseAdapter {
+    private List<BlackContactInfo> contactInfos;
     private Context context;
     private BlackNumberDao dao;
     private BlackConactCallBack callBack;
@@ -36,8 +38,9 @@ public class BlackContactAdapter extends BaseAdapter{
     public void setCallBack(BlackConactCallBack callBack){
         this.callBack = callBack;
     }
-    public BlackContactAdapter(List<BlackContactInfo>systemContacts,
-                               Context context){
+
+    public BlackContactAdapter(List<BlackContactInfo> systemContacts, Context context){
+
         super();
         this.contactInfos = systemContacts;
         this.context = context;
