@@ -27,13 +27,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".SplashActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
-
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
-
+        </activity>
 
         <!-- <activity android:name=".m1home.HomeActivity" /> -->
         <activity android:name=".m2theftguard.LostFindActivity" />
@@ -54,13 +53,10 @@
 
             </intent-filter>
         </receiver>
-
-
         <service
             android:name=".m2theftguard.service.GPSLocationService"
             android:enabled="true"
             android:exported="true" />
-
         <receiver
             android:name="m2theftguard.receiver.SmsLostFindReceiver"
             android:enabled="true"
@@ -82,12 +78,9 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
-
         <!-- 通讯卫士部分 -->
         <activity android:name=".m3communicationguard.AddBlackNumberActivity" />
         <activity android:name=".m3communicationguard.SecurityPhoneActivity" />
-
-
         <receiver
             android:name=".m3communicationguard.receiver.InterceptCallReceiver"
             android:enabled="true"
@@ -105,8 +98,6 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-
-
         <activity android:name=".m4appmanager.AppManagerActivity" />
         <activity android:name=".m5virusscan.VirusScanActivity" />
         <activity android:name=".m5virusscan.VirusScanSpeedActivity"></activity>
