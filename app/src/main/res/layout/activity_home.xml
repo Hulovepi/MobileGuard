@@ -24,7 +24,7 @@
             android:textSize="16sp"
 
 
-            android:text="一步两步，是魔鬼的步伐！"
+            android:text="一步两步，是魔鬼的步伐!！"
             android:textColor="#90000000"
             android:textScaleX="1.1"
             android:typeface="normal"/>
