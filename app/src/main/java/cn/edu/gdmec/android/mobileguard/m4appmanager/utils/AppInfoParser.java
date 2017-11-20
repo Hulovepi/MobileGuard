@@ -12,6 +12,7 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.CertificateException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.security.cert.X509Certificate;
 import cn.edu.gdmec.android.mobileguard.m4appmanager.entity.AppInfo;
@@ -141,6 +142,7 @@ public class AppInfoParser {
                 e.printStackTrace();
             }
 
+            appinfo.appActivities = Arrays.toString(packInfo.activities);
 
             //app权限申请信息
             try {

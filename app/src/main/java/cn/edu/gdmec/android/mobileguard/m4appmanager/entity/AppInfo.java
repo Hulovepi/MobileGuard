@@ -25,6 +25,8 @@ public class AppInfo {
     public String certificateIssuer;
     /** 权限申请信息*/
     public String appPermissions;
+    /** 应用程序的活动*/
+    public String appActivities;
 
     /**是否是手机存储*/
      public boolean isInRoom;

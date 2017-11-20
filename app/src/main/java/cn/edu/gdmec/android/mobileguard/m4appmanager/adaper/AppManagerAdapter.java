@@ -116,6 +116,8 @@ public class AppManagerAdapter extends BaseAdapter{
                     .findViewById(R.id.tv_uninstall_app);
             viewHolder.mAboutAppTV = (TextView) view
                     .findViewById(R.id.tv_about_app);
+            viewHolder.mActivitiesAppTV = (TextView)view
+                    .findViewById(R.id.tv_activity_app);
             view.setTag(viewHolder);
         }
         if(appInfo != null){
@@ -137,6 +139,7 @@ public class AppManagerAdapter extends BaseAdapter{
         viewHolder.mShareAppTV.setOnClickListener(listener);
         viewHolder.mUninstallTV.setOnClickListener(listener);
         viewHolder.mAboutAppTV.setOnClickListener(listener);
+        viewHolder.mActivitiesAppTV.setOnClickListener(listener);
 
         return view;
     }
@@ -166,6 +169,8 @@ public class AppManagerAdapter extends BaseAdapter{
         TextView mSettingAppTV;
         /** 关于app */
         TextView mAboutAppTV;
+        /** 应用程序活动*/
+        TextView mActivitiesAppTV;
         /** app 图标 */
         ImageView mAppIconImgv;
         /** app位置 */
