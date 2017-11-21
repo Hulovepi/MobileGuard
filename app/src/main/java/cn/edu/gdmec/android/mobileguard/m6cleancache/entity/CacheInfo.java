@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable;
  */
 
 public class CacheInfo {
-    /**包名*/
+    /**包名!*/
     public String packagename;
     /**缓存大*/
     public long cacheSize;
