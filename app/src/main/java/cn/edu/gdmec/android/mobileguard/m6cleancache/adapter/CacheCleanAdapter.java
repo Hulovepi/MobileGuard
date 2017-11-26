@@ -42,8 +42,6 @@ public class CacheCleanAdapter extends BaseAdapter{
     public long getItemId(int i) {
         return i;
     }
-
-    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder = null;

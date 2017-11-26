@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_margin="5dp"/>
 
-        <TextView
+    <TextView
         android:id="@+id/tv_appname_cacheclean"
         style="@style/textview16sp"
         android:layout_toRightOf="@+id/imgv_appicon_cacheclean"

@@ -8,8 +8,9 @@ import android.content.pm.PackageStats;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Message;
+import android.os.PersistableBundle;
 import android.os.RemoteException;
-import android.support.annotation.RequiresApi;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.Formatter;
@@ -49,7 +50,6 @@ public class CacheClearListActivity extends AppCompatActivity implements View.On
     private Button mCacheBtn;
     private Thread thread;
     private Handler handler = new Handler() {
-        @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
@@ -79,6 +79,14 @@ public class CacheClearListActivity extends AppCompatActivity implements View.On
 
         }
     };
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cache_clear_list);
+        pm = getPackageManager();
+        initView();
+    }
 
     /**
      * 初始化控件

@@ -13,12 +13,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Random;
-import java.util.logging.LogRecord;
+
 
 import cn.edu.gdmec.android.mobileguard.R;
 
