@@ -115,9 +115,14 @@
         <receiver
             android:name=".m8trafficmonitor.receiver.BootCompleteReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
-        <activity android:name=".m8trafficmonitor.TrafficMonitoringActivity"></activity>
-        <activity android:name=".m8trafficmonitor.OperatorSetActivity"></activity>
+            android:exported="true" />
+
+
+
+        <activity android:name=".m8trafficmonitor.TrafficMonitoringActivity" />
+        <activity android:name=".m8trafficmonitor.OperatorSetActivity" />
+        <activity android:name=".m9advancedtools.AdvancedToolsActivity" />
+        <activity android:name=".m9advancedtools.NumBelongtoActivity"/>
     </application>
 
 </manifest>

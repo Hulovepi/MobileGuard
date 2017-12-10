@@ -21,6 +21,7 @@ import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.InterPasswordDialog;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.dialog.SetUpPasswordDialog;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.receiver.MyDeviceAdminReceiver;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.utils.MD5Utils;
+import cn.edu.gdmec.android.mobileguard.m3communicationguard.AddBlackNumberActivity;
 import cn.edu.gdmec.android.mobileguard.m3communicationguard.SecurityPhoneActivity;
 import cn.edu.gdmec.android.mobileguard.m4appmanager.AppManagerActivity;
 import cn.edu.gdmec.android.mobileguard.m5virusscan.VirusScanActivity;
@@ -28,6 +29,8 @@ import cn.edu.gdmec.android.mobileguard.m6cleancache.CacheClearListActivity;
 import cn.edu.gdmec.android.mobileguard.m6cleancache.CleanCacheActivity;
 import cn.edu.gdmec.android.mobileguard.m8trafficmonitor.OperatorSetActivity;
 import cn.edu.gdmec.android.mobileguard.m8trafficmonitor.TrafficMonitoringActivity;
+import cn.edu.gdmec.android.mobileguard.m9advancedtools.AdvancedToolsActivity;
+import cn.edu.gdmec.android.mobileguard.m9advancedtools.widget.AdvancedToolsView;
 
 public class HomeActivity extends AppCompatActivity {
     private GridView gv_home;
@@ -76,7 +79,9 @@ public class HomeActivity extends AppCompatActivity {
                     case 6:
                         startActivity(TrafficMonitoringActivity.class);
                         break;
-
+                    case 7:
+                        startActivity(AdvancedToolsActivity.class);
+                        break;
 
                 }
             }
