@@ -44,4 +44,6 @@ public class AppInfo {
               return "外部存储";
           }
       }
+    /**应用程序是否加速*/
+    public boolean isLock;
 }
